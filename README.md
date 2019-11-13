@@ -13,7 +13,7 @@
 Чтобы запустить тесты, нужно использовать PHPUnit-флаг `--stderr`, 
 так как тестируемые методы могут работать с заголовками.</br>
 ## Структура базы данных
-!https://github.com/Letha/auth-module_demo/blob/develop/schemes/db_Main.png
+!(https://github.com/Letha/auth-module_demo/blob/develop/schemes/db_Main.png)
 ## Структура директорий
 В корневой директории:
 - Файл для Docker-compose.
