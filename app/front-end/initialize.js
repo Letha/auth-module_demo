@@ -1,12 +1,18 @@
 // initialization
 core.controller.initialize();
 
-// bind event handlers
-$('form[name="enter"], form[name="register"]').find('.b-form__link_side')
-    .click(core.controller.onClickEnterFormSwitch);
-$('form[name="enter"]').submit(core.controller.login);
+// define variables
+let regForm = document.forms.register,
+    enterForm = document.forms.enter,
+    langToEnForm = document.forms.langToEn,
+    langToRuForm = document.forms.langToRu,
+    jRegForm = $(regForm);
 
-let jRegForm = $('form[name="register"]');
+// bind event handlers
+$([regForm, enterForm]).find('.b-form__link_side')
+    .click(core.controller.onClickEnterFormSwitch);
+$(enterForm).submit(core.controller.login);
+
 jRegForm.submit(core.controller.register);
 jRegForm.find('input[name="login"]').on('change', core.controller.onWrongInput);
 
@@ -18,7 +24,9 @@ jRegForm.find('input[name="name"]').on('change', core.controller.onWrongInput);
 jRegForm.find('input[name="surname"]').on('change', core.controller.onWrongInput);
 jRegForm.find('input[name="birthDate"]').on('change', core.controller.onWrongInput);
 
-$('form[name="langToEn"]').submit(core.controller.onSubmitLangSwitchForm);
-$('form[name="langToRu"]').submit(core.controller.onSubmitLangSwitchForm);
+$([langToEnForm, langToRuForm]).submit(core.controller.onSubmitLangSwitchForm);
 
 $('.f-exit').click(core.controller.exit);
+
+// enable submit buttons
+$([regForm, enterForm, langToEnForm, langToRuForm]).find('button[type="submit"]').removeAttr('disabled');

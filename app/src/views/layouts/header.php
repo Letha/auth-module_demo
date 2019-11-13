@@ -30,11 +30,11 @@
         <form name='langToEn' enctype='multipart/form-data'>
             <input type='hidden' name='language' value='en'>
             <button class='b-button b-button_form_1 b-button_palette_white <?=$lang === 'en' ? 'b-button_choosen' : ''?>'
-                type='submit' <?=$lang === 'en' ? 'disabled' : ''?>>en</button>
+                type='submit' <?=$lang === 'en' ? 'disabled' : ''?> disabled>en</button>
         </form>
         <form name='langToRu' enctype='multipart/form-data'>
             <input type='hidden' name='language' value='ru'>
             <button class='b-button b-button_form_1 b-button_palette_white <?=$lang === 'ru' ? 'b-button_choosen' : ''?>'
-                type='submit' <?=$lang === 'ru' ? 'disabled' : ''?>>ru</button>
+                type='submit' <?=$lang === 'ru' ? 'disabled' : ''?> disabled>ru</button>
         </form>
     </div>

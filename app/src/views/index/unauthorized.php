@@ -52,7 +52,7 @@
     </label>
     
     <p class='b-form__notice'><?=$symbolSign?> * <?=$words['means_required_fields']?>.</p>
-    <button class='b-form__button b-button b-button_form_1 b-button_palette_purple' type='submit'>
+    <button class='b-form__button b-button b-button_form_1 b-button_palette_purple' type='submit' disabled>
         <?=$doRegSign?>
     </button>
     <a class='b-form__link b-form__link_side b-link b-link_palette_purple' href='#'><?=$words['do_enter']?></a>
@@ -66,7 +66,7 @@
         <input class='b-form__input_text' type='password' name='password' required maxlength='30'>
     </label>
     
-    <button class='b-form__button b-button b-button_form_1 b-button_palette_purple' type='submit'>
+    <button class='b-form__button b-button b-button_form_1 b-button_palette_purple' type='submit' disabled>
         <?=$doEnterSign?>
     </button>
     <a class='b-form__link b-form__link_side b-link b-link_palette_purple' href='#'><?=$words['do_register']?></a>
