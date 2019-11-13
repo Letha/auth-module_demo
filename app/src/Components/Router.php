@@ -1,11 +1,14 @@
 <?php
     namespace App\Components;
     use App\Controllers;
-    use App\Components\Exceptions\RouterException;
+    use App\Components\AppException;
     /**
      * Used to define controller and its action accordingly to client request.
-     * @property array of strings $routes - existing routes to
+     * @property $routes (array of strings or undefined) - existing routes to
      * controllers with their actions.
+     * @method public __construct().
+     * @method private getURI(): string.
+     * @method public run(): bool.
      */
     class Router
     {
@@ -51,7 +54,7 @@
                     // Rest parts of path transit into an action as parameters.
                     $actionResult = call_user_func_array(array($controller, $actionName), $pathParts);
                     if ($actionResult === false) {
-                        throw new RouterException('Router did not call action.');
+                        throw new AppException('Router did not call action.');
                     }
                     return true;
                 }
