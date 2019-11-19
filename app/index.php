@@ -28,12 +28,12 @@
         $queryState = $router->run();
         if ($queryState === false) {
             header('HTTP/1.1 404 Not Found');
-            require ROOT . 'src/Views/Errors/404.php';
+            require ROOT . 'src/views/errors/404.php';
             exit;
         }
     } catch (AppException $exeption) {
         header('HTTP/1.1 500 Internal Server Error');
-        require ROOT . 'src/Views/Errors/500.php';
+        require ROOT . 'src/views/errors/500.php';
         exit;
     }
   
