@@ -21,7 +21,7 @@
     <title><?=isset($htmlPreprocessor) ? $htmlPreprocessor->title : 'App'?></title>
 
     <!-- own styles - begin -->
-    <link rel='stylesheet' href='./front-end/main.css'>
+    <link rel='stylesheet' href='/front-end/main.css'>
     <!-- end -->
 </head>
 <body>
